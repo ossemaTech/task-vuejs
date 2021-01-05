@@ -5,23 +5,23 @@
                 <div class="sidebar">
                     <div>
                         <b-button v-b-toggle.sidebar-1><b-icon icon="justify-left"></b-icon></b-button>
-                        <b-sidebar id="sidebar-1" title="Sidebar" shadow>
-                        <div class="px-3 py-2">
-                            <nav class="mb-3">
-                                <router-link class="nav-link" exact to="/">
-                                    <b-icon icon="house-door"></b-icon> Ana Sayfa
-                                </router-link>
-                                <button type="submit" class="btn btn-danger btn-block" @click.prevent="logout">logout</button>
-                                <div class='link-bottom'>
+                        <b-sidebar id="sidebar-1" title="Sidebar" shadow style="display: flex !important">
+                            <div class="px-3 py-2">
+                                <nav class="mb-3">
                                     <router-link class="nav-link" exact to="/">
-                                        Test User
+                                        <b-icon icon="house-door"></b-icon> Ana Sayfa
                                     </router-link>
-                                    <router-link class="nav-link" exact to="/">
-                                        Role
-                                    </router-link>
-                                </div>
-                            </nav>
-                        </div>
+                                    <div class='link-bottom'>
+                                        <router-link class="nav-link" exact to="/">
+                                            Test User
+                                        </router-link>
+                                        <router-link class="nav-link" exact to="/">
+                                            Role
+                                        </router-link>
+                                        <a type="submit" class="nav-link" @click.prevent="logout">logout</a>
+                                    </div>
+                                </nav>
+                            </div>
                         </b-sidebar>
                     </div>
                 </div>
@@ -59,45 +59,49 @@
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover;
         overflow: auto;
-    }
 
-    .title {
-        color: #777;
-        font-size: 24px;
-        font-weight: 700;
-    }
-    .nav-link {
-        color: #777;
-        font-size: 18px;
-    }
-    .b-icon.bi {
-        color: #e37e28 !important;
-        font-size: 18px;
-    }
+        .title {
+            color: #777;
+            font-size: 24px;
+            font-weight: 700;
+        }
 
-    .link-bottom {
-        position: absolute;
-        bottom: 20px;
-        width: 90%;
-    }
+        .nav-link {
+            color: #777;
+            font-size: 18px;
 
-    .link-bottom .nav-link {
-        background: #ccc;
-        border-radius: 16px;
-        color: #e37e28 !important;
-        margin-top: 8px;
-    }
+            .b-icon.bi {
+                color: #e37e28 !important;
+                font-size: 18px;
+            }
+        }
 
-    .chart-bg {
-        margin: 0;
-        margin-top: 20px !important;
-        margin-right: 15px !important;
-        padding: 10px;
-        background-color: #cccccc80;
-        border-radius: 8px;
-        -webkit-box-shadow: 7px 7px 5px 0px rgba(150, 150, 150, 0.75);
-        -moz-box-shadow:    7px 7px 5px 0px rgba(150, 150, 150, 0.75);
-        box-shadow:         7px 7px 5px 0px rgba(150, 150, 150, 0.75);
+        .link-bottom {
+            position: absolute;
+            bottom: 20px;
+            width: 90%;
+
+            .nav-link {
+                background: #ccc;
+                border-radius: 16px;
+                color: #e37e28 !important;
+                margin-top: 8px;
+            }
+        }
+
+        .chart-bg {
+            margin: 0;
+            margin-top: 20px !important;
+            margin-right: 15px !important;
+            padding: 10px;
+            background-color: #cccccc80;
+            border-radius: 8px;
+            -webkit-box-shadow: 7px 7px 5px 0px rgba(150, 150, 150, 0.75);
+            -moz-box-shadow:    7px 7px 5px 0px rgba(150, 150, 150, 0.75);
+            box-shadow:         7px 7px 5px 0px rgba(150, 150, 150, 0.75);
+        }
+
+
     }
 
 
