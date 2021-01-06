@@ -27,8 +27,8 @@ export default new Vuex.Store({
     checkUser(state, object) {
       if(object.email == state.email && object.password == state.password) {
         state.loggedIn = true;
-        router.push('/dashboard')
         localStorage.islogged = true;
+        router.push('/dashboard');
         return true;
       }
     },
